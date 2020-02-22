@@ -1,5 +1,4 @@
-
-/** */
+/** 기기 정보 */
 var DEVICE_TYPE = {
     ANDROID: 'android',
     IPHONE: 'iphone',
@@ -7,17 +6,21 @@ var DEVICE_TYPE = {
 }
 
 /** 
- * 
+ * 안드로이드 버전 문턱 값
  */
 var ANDROID_THRESHOLD = {
     type: DEVICE_TYPE.ANDROID,
     version: 5
 };
 
-var IPHONE_THRESHOLD = {
-    type: DEVICE_TYPE.IPHONE,
-    version: '10_1'
-};
+/**
+ * 아이폰 버전 문턱 값
+ */
+var IPHONE_THRESHOLD = null;
+// var IPHONE_THRESHOLD = {
+//     type: DEVICE_TYPE.IPHONE,
+//     version: '10_1'
+// };
 
 function getDeviceInfo() {
     var userAgent = navigator.userAgent.toLocaleLowerCase(); 
@@ -52,7 +55,7 @@ function getDeviceInfo() {
 function checkAndroid(result) {
     var isAvailable = false;
     var threshold = ANDROID_THRESHOLD;
-    if (threshold.type === result.type) {
+    if (threshold && threshold.type === result.type) {
         if (result.version - threshold.version >= 0) {
             isAvailable = true;
         }
@@ -63,7 +66,7 @@ function checkAndroid(result) {
 function checkIPhone(result) {
     var isAvailable = false;
     var threshold = IPHONE_THRESHOLD;
-    if (threshold.type === result.type) {
+    if (threshold && threshold.type === result.type) {
         var resultVerSplit = result.version.split('_').map(elem => parseInt(elem));
         var thresholdVerSplit = threshold.version.split('_').map(elem => parseInt(elem));
         // 앞자리 큰 경우
