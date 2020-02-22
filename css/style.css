@@ -1,0 +1,42 @@
+html {
+    font-family: 'Noto Sans KR';
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr td {
+    border: 1px solid #333333;
+    padding: 8px;
+}
+
+#Result {
+    border: 1px solid #333333;
+}
+
+.result {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    border: 1px solid #333333;
+}
+.result .success {
+    font-weight: bold;
+    color: green;
+    font-size: 20px;
+}
+.result .fail {
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+
+.wrap {
+    padding-top: 16px;
+}
+
+.detail {
+    padding-top: 8px;
+}
