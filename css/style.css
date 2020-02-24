@@ -24,13 +24,13 @@ table tr td {
 }
 .result .success {
     font-weight: bold;
-    color: green;
-    font-size: 20px;
+    color: white;
+    font-size: 25px;
 }
 .result .fail {
     font-weight: bold;
-    color: red;
-    font-size: 20px;
+    color: white;
+    font-size: 25px;
 }
 
 .wrap {

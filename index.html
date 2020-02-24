@@ -29,9 +29,10 @@
                 <div class="content">
                     <h5>ePRO 환자앱 설치 가능 확인</h5>
                     <hr />
+                    <!-- [Report] -->
                     <div id="Report">
                         <div class="result">
-
+                            <!-- 검사 결과 표출 부분 -->
                         </div>
                         <div class="detail">
                             <table>
@@ -52,6 +53,7 @@
                             </table>
                         </div>
                     </div>
+                    <!-- /[Report] -->
                 </div>
             </div>
 
@@ -65,9 +67,11 @@
 
     // 설치 결과 알리기
     if (result.isAvailable) {
-        $('.result').html('<span class="success">[ 설치 가능 ]</span>');
+        $('.result').html('<span class="success">설치 가능</span>');
+        $('.result').css('background-color', '#3FA535');
     } else {
-        $('.result').html('<span class="fail">[ 설치 불가 ]</span>');
+        $('.result').html('<span class="fail">설치 불가</span>');
+        $('.result').css('background-color', '#CD171A');
     }
     // 상세 내용 보이기
     $('.detail #OsVal').text(result.type);
