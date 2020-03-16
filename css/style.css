@@ -18,10 +18,22 @@ table tr td {
 
 .result {
     height: 200px;
-    line-height: 200px;
+    width: 100%;
+    display: table;
     text-align: center;
     border: 1px solid #333333;
 }
+
+.result span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.result span a {
+    color: white;
+    text-decoration: underline;
+}
+
 .result .success {
     font-weight: bold;
     color: white;
